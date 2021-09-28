@@ -1,0 +1,23 @@
+{
+    "homepage": "https://www.etl-tools.com/database-browser/overview.html",
+    "version": "5.3.2.13",
+    "url": "https://portableapps.com/redirect/?a=DatabaseBrowserPortable&s=s&p=https://www.etl-tools.com/dmdocuments/&d=pb&f=DatabaseBrowserPortable_5.3.2.13_English.paf.exe#/dl.7z",
+    "bin": [
+        "DatabaseBrowserPortable.exe"
+    ],
+    "persist": "Data",
+    "post_install": [
+        "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+    ],
+    "shortcuts": [[
+	    "DatabaseBrowserPortable.exe",
+	    "Database Browser Portable (ETL-tools.com)"
+    ]],
+    "checkver": {
+        "url": "https://portableapps.com/apps/development/database_browser_portable",
+        "re": "Version ([\\d.]+) for Windows"
+    },
+    "autoupdate": {
+        "url":  "https://portableapps.com/redirect/?a=DatabaseBrowserPortable&s=s&p=https://www.etl-tools.com/dmdocuments/&d=pb&f=DatabaseBrowserPortable_$version_English.paf.exe#/dl.7z"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "homepage": "http://www.sqldbx.com/personal_edition.htm",
+    "version": "latest",
+    "url": "http://www.sqldbx.com/Files/sqldbxpersonal.zip",
+    "bin": [
+        "SqlDbx.exe"
+    ],
+    "shortcuts": [[
+	    "SqlDbx.exe",
+	    "SqlDbx (Personal Edition)"
+    ]]
+}
+

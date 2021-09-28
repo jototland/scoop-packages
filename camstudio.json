@@ -1,0 +1,23 @@
+{
+    "homepage": "https://camstudio.org/",
+    "version": "2.7.2",
+    "url": "https://portableapps.com/redirect/?a=CamStudioPortable&s=s&d=pa&f=CamStudioPortable_2.7.2_English.paf.exe#/dl.7z",
+    "bin": [
+        "CamStudioPortable.exe"
+    ],
+    "persist": "Data",
+    "post_install": [
+        "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+    ],
+    "shortcuts": [[
+	    "CamStudioPortable.exe",
+	    "CamStudio Portable"
+    ]],
+    "checkver": {
+        "url": "https://portableapps.com/apps/utilities/camstudio_portable#download_details",
+        "re": "Version ([\\d.]+) for Windows"
+    },
+    "autoupdate": {
+        "url":  "https://portableapps.com/redirect/?a=CamStudioPortable&s=s&d=pa&f=CamStudioPortable_$version_English.paf.exe#/dl.7z"
+    }
+}
